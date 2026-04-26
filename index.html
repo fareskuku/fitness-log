@@ -3,14 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>💪 Fitness Log - Track Your Workouts</title>
+    <title>💪 Fitness Log API</title>
     <link rel="stylesheet" href="/css/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
     <div class="container">
-        <!-- Header -->
         <div class="header">
             <div class="logo">
                 <i class="fas fa-dumbbell"></i>
@@ -19,7 +18,6 @@
             <p class="tagline">Track, Monitor, and Achieve Your Fitness Goals</p>
         </div>
 
-        <!-- Stats Bar -->
         <div class="stats-bar" id="statsBar">
             <div class="stat-card">
                 <i class="fas fa-running"></i>
@@ -44,9 +42,7 @@
             </div>
         </div>
 
-        <!-- Main Content - 2 Columns -->
         <div class="main-grid">
-            <!-- Left Column: Create Workout -->
             <div class="card">
                 <div class="card-header">
                     <i class="fas fa-plus-circle"></i>
@@ -91,7 +87,6 @@
                 </form>
             </div>
 
-            <!-- Right Column: Update & Delete -->
             <div class="card">
                 <div class="card-header">
                     <i class="fas fa-edit"></i>
@@ -145,7 +140,6 @@
             </div>
         </div>
 
-        <!-- Workouts List Section -->
         <div class="card full-width">
             <div class="card-header">
                 <i class="fas fa-list"></i>
@@ -166,7 +160,6 @@
         </div>
     </div>
 
-    <!-- Toast Message -->
     <div id="toast" class="toast"></div>
 
     <script src="/js/script.js"></script>
