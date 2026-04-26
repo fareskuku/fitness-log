@@ -163,6 +163,17 @@ const deleteWorkout = async (id) => {
 
 const PORT = 3000;
 server.listen(PORT, () => {
-    console.log(`Server is running on port ${PORT}`);
-    console.log(`http://localhost:${PORT}`);
+    console.log(`========================================`);
+    console.log(`💪 FITNESS LOG API`);
+    console.log(`========================================`);
+    console.log(`📍 Server: http://localhost:${PORT}`);
+    console.log(`📁 API Base: http://localhost:${PORT}/api/workouts`);
+    console.log(`========================================`);
+    console.log(`🎯 Available Endpoints:`);
+    console.log(`   GET    /api/workouts`);
+    console.log(`   GET    /api/workouts/{id}`);
+    console.log(`   POST   /api/workouts`);
+    console.log(`   PUT    /api/workouts`);
+    console.log(`   DELETE /api/workouts/{id}`);
+    console.log(`========================================`);
 });
