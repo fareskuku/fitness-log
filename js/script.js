@@ -1,12 +1,10 @@
 const API_URL = '/api/workouts';
 
-// Load all workouts on page load
 window.onload = () => {
     loadAllWorkouts();
     document.getElementById('date').valueAsDate = new Date();
 };
 
-// Create workout
 document.getElementById('createForm').addEventListener('submit', async (e) => {
     e.preventDefault();
     
@@ -39,7 +37,6 @@ document.getElementById('createForm').addEventListener('submit', async (e) => {
     }
 });
 
-// Load all workouts
 async function loadAllWorkouts() {
     try {
         const response = await fetch(API_URL);
@@ -51,7 +48,6 @@ async function loadAllWorkouts() {
     }
 }
 
-// Update statistics
 function updateStats(workouts) {
     const totalWorkouts = workouts.length;
     const totalCalories = workouts.reduce((sum, w) => sum + (w.caloriesBurned || 0), 0);
@@ -62,7 +58,6 @@ function updateStats(workouts) {
     document.getElementById('totalMinutes').textContent = totalMinutes;
 }
 
-// Search single workout
 async function searchWorkout() {
     const id = document.getElementById('searchId').value;
     if (!id) {
@@ -85,7 +80,6 @@ async function searchWorkout() {
     }
 }
 
-// Update workout
 async function updateWorkout() {
     const id = document.getElementById('updateId').value;
     if (!id) {
@@ -94,7 +88,6 @@ async function updateWorkout() {
     }
 
     try {
-        // First get existing workout
         const getResponse = await fetch(`${API_URL}/${id}`);
         if (!getResponse.ok) {
             showToast('Workout not found', 'error');
@@ -130,7 +123,6 @@ async function updateWorkout() {
     }
 }
 
-// Delete workout
 async function deleteWorkout() {
     const id = document.getElementById('updateId').value;
     if (!id) {
@@ -156,7 +148,6 @@ async function deleteWorkout() {
     }
 }
 
-// Display workouts
 function displayWorkouts(workouts) {
     const container = document.getElementById('workoutsList');
     if (!workouts || workouts.length === 0) {
@@ -202,7 +193,6 @@ function displayWorkouts(workouts) {
     `).join('');
 }
 
-// Populate update form with workout data
 async function populateUpdateForm(id) {
     try {
         const response = await fetch(`${API_URL}/${id}`);
@@ -221,7 +211,6 @@ async function populateUpdateForm(id) {
     }
 }
 
-// Quick delete
 async function quickDelete(id) {
     if (confirm('Delete this workout?')) {
         try {
@@ -238,7 +227,6 @@ async function quickDelete(id) {
     }
 }
 
-// Clear update form
 function clearUpdateForm() {
     document.getElementById('updateId').value = '';
     document.getElementById('updateExerciseType').value = '';
@@ -249,7 +237,6 @@ function clearUpdateForm() {
     document.getElementById('updateNotes').value = '';
 }
 
-// Show toast message
 function showToast(message, type = 'success') {
     const toast = document.getElementById('toast');
     toast.textContent = message;
