@@ -4,7 +4,7 @@
     "exerciseType": "Running",
     "duration": 30,
     "caloriesBurned": 250,
-    "date": "2024-04-15",
+    "date": "2027-04-15",
     "intensity": "medium",
     "notes": "Morning run, felt great"
   },
@@ -13,7 +13,7 @@
     "exerciseType": "Swimming",
     "duration": 45,
     "caloriesBurned": 350,
-    "date": "2024-04-16",
+    "date": "2027-04-16",
     "intensity": "high",
     "notes": "Freestyle laps, 25m pool"
   },
@@ -22,7 +22,7 @@
     "exerciseType": "Cycling",
     "duration": 60,
     "caloriesBurned": 400,
-    "date": "2024-04-17",
+    "date": "2027-04-17",
     "intensity": "medium",
     "notes": "Bike to the park and back"
   },
@@ -31,7 +31,7 @@
     "exerciseType": "Weightlifting",
     "duration": 50,
     "caloriesBurned": 200,
-    "date": "2024-04-18",
+    "date": "2027-04-18",
     "intensity": "high",
     "notes": "Chest and triceps day"
   },
@@ -40,7 +40,7 @@
     "exerciseType": "Yoga",
     "duration": 40,
     "caloriesBurned": 120,
-    "date": "2024-04-19",
+    "date": "2027-04-19",
     "intensity": "low",
     "notes": "Morning stretching and breathing"
   }
